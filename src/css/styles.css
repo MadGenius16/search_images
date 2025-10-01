@@ -7,4 +7,122 @@
 /* Common styles */
 @import url('./reset.css');
 
-@import url('./container.css');
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: 14px;
+}
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #808080;
+  border-radius: 6px;
+}
+
+img {
+  width: 360px;
+  height: 200px;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 28px;
+  padding: 4px 8px;
+}
+
+.info-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.btnSearch {
+  display: inline-flex;
+  justify-content: center;
+  padding: 9px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  width: 90px;
+  text-align: center;
+}
+
+.btnSearch:hover,
+.btnSearch:focus {
+  background-color: #6c8cff;
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  padding: 9px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  /* width: 90px; */
+  text-align: center;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.load-more:hover,
+.load-more:focus {
+  background-color: #6c8cff;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input {
+  display: flex;
+  width: 272px;
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+input:focus {
+  border: #4e75ff;
+}
