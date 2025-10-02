@@ -1,14 +1,15 @@
 import iziToast from 'izitoast';
-import { gallery, Lightbox } from './main';
+import { gallery, Lightbox, searchForm } from './main';
 
 export function createGallery(images) {
   if (images.length === 0) {
-    iziToast.error({
-      title: 'Error',
-      position: 'topRight',
-      message:
-        'Sorry, there are no images matching your search query. Please try again!',
-    });
+    // iziToast.error({
+    //   title: 'Error',
+    //   position: 'topRight',
+    //   message:
+    //     'Sorry, there are no images matching your search query. Please try again!',
+    // });
+    searchForm.reset();
     return;
   } else {
     const markup = images
