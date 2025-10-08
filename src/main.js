@@ -57,11 +57,19 @@ searchForm.addEventListener('submit', async event => {
   gallery.innerHTML = '';
   query = event.target.elements.searchQuery.value.trim();
   page = 1;
-  // hideLoadMoreButton();
+  hideLoadMoreButton();
   if (query !== '') {
     try {
       const images = await getImagesByQuery(query, page);
       maxPages = Math.ceil(images.totalHits / perPage);
+      if (images.totalHits === 0) {
+        iziToast.warning({
+          color: 'red',
+          position: 'topRight',
+          title: 'Error',
+          message: "We're sorry,",
+        });
+      }
       createGallery(images.hits);
     } catch {
       iziToast.warning({
